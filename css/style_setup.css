@@ -1,0 +1,90 @@
+@charset 'UTF-8';
+
+*{
+	margin: 0 auto;
+ 	font-family: 'NanumGothic', sans-serif;
+}
+
+a:link{
+	color:#000;
+	text-decoration:none;
+}
+a:visited{
+	color:#000;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#000;
+	text-decoration:none;
+}
+
+.ck_input_table{
+	width: 100%;
+	text-align: center;
+}
+
+.sub_title{
+	margin:10px;
+}
+
+.sub_hr{
+	margin:10px;
+	background:#2E2E2E; 
+	padding-top:5px;
+	border:0px;
+}
+
+.ck_agreement_font{
+	font-size:15px;
+}
+
+.ck_agreement_tbl{
+	width: 100%;
+	border:1px solid #e2e2e2;
+	text-align: center;
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+
+.ck_agreement .head{
+	background: #343434;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.ck_agreement_notice_tbl{
+	width: 100%;
+	border:1px solid #e2e2e2;
+	text-align: center;
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+
+.ck_agreement_notice_tbl .head_border{
+	background: #0174DF;
+	height: 5px;
+}
+
+.ck_agreement_notice_tbl .head{
+	background: #424242;
+	height: 15px;
+}
+
+.ck_input_agreement_tbl{
+	width: 100%;
+	background: #A9E2F3;
+	border:1px solid #e2e2e2;
+	text-align: center;
+	border-collapse: collapse; 
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.ck_input_agreement_detail_tbl{
+	width: 40%;
+	text-align: center;
+	border-collapse: collapse; 
+	border-spacing: 0;
+}

@@ -1,0 +1,152 @@
+<html>
+<head>
+	<title>메인화면 - Smart Logisitics</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../css/style_main.css">
+	<link rel="stylesheet" href="../../library/c3/c3.css">
+	<script src="../../library/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../../library/c3/c3.js"></script>
+	<script src="../../library/d3/d3.v5.min.js"></script>
+</head>
+<body>
+	<table class="smart_main_tbl">
+		<!-- 상단 -->
+		<tr>
+			<td style="width:20%">
+				<!-- 로고 -->
+				<table style="width:100%;">
+					<tr>
+						<td style="width:30%; text-align:center;">
+							<img src="../../images/logo.png" width="40%" height="40%" alt="로고">
+						</td>
+						<td>
+							<div class="txt_Logo">스마트 물류 관리 시스템</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="txt_Mode">[운영 / 개발]</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="text-align:right">
+				{$session_auth_name} / {$session_usrname}님 <a href="../../index.php/employee/logout">로그아웃</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="menu_bar">
+				<ul>
+					<li>
+						<a href="main">메인</a>
+					</li>
+					<li>
+						스마트 물류
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<!-- 본문 -->
+		<tr>
+			<td class="sub_menu">
+				<ul>
+					<li>
+						<div class="sub_title">1. 생산</div>
+						<ul>
+							<li>
+								<div class="sub_m1">
+									<a href="factory?func=input">입고</a>
+								</div>
+							</li>
+							<li>
+								<div class="sub_m1">
+									<a href="factory?func=output">출고</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="sub_title">2. 제품</div>
+						<ul>
+							<li>
+								<div class="sub_m1">
+									<a href="product?func=item_status">물품 현황</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+			
+			<td class="main" style="border:1px solid #e2e2e2">
+				<h3 class="sub_title">실시간 현황</h3>
+				<hr class="sub_hr">
+				<table>
+					<tr>
+						<td style="width:450px;">
+							<div class="chart_title">입출고 현황</div>
+							<hr class="chart_hr">
+							<div class="chart_range_date">기간: {$startDate} ~ {$endDate}</div>
+							<br>
+							<div id='chart1'></div>
+						</td>
+						<td style="width:450px;">
+							<div class="chart_title">장비 가동 현황</div>
+							<hr class="chart_hr">
+							<div class="chart_range_date">기간: {$startDate} ~ {$endDate}</div>
+							<br>
+							<div id='chart2'></div>
+						</td>
+					</tr>
+				</table>
+
+				<!-- 차트 -->
+				<script type="text/javascript">
+					var generate1 = function () { 
+						return c3.generate({
+							bindto: '#chart1',
+							data: {
+							columns: [
+								['입고', {$sum_of_input}],
+								['출고', {$sum_of_output}]
+							],
+							type: 'bar'
+							},
+							bar: {
+							space: 0.25
+							}
+						}); 
+					},
+					chart1 = generate1();
+					
+					var generate2 = function () { 
+						return c3.generate({
+							bindto: '#chart2',
+							data: {
+							columns: [
+								['로봇팔1', 30, 200, 100],
+								['로봇팔2', 0, 0, 0]
+							],
+							type: 'bar'
+							},
+							bar: {
+							space: 0.25
+							}
+						}); 
+					},
+					chart2 = generate2();
+					
+				</script>
+				
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="border:1px solid #e2e2e2; background:#e2e2e2;">
+				최초 접속 시간: {$today}
+			</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

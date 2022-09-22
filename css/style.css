@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+
+*{
+	margin: 0 auto;
+ 	font-family: 'NanumGothic', sans-serif;
+}
+
+a:link{
+	color:#000;
+	text-decoration:none;
+}
+a:visited{
+	color:#000;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#000;
+	text-decoration:none;
+}
+
+.smart_tbl{
+	margin-top: 15px;
+	border:1px solid #e2e2e2;
+	border-collapse: collapse;
+}
+
+.smart_tbl td{
+	height: 40px;
+}
+
+.smart_tbl .login_td{
+	border-top:1px solid #e2e2e2;
+}
+
+.txt_logo{
+	font-weight:bold;
+	font-size:32px;
+	margin: 0 auto;
+	padding:10px;
+}
+
+.txt_span{
+	font-size:14px;
+	margin: 0 auto;
+}
+
+.btn_submit{
+	font-weight:bold;
+}
