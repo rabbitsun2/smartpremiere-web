@@ -28,8 +28,8 @@
                             <span class="fw-bold">{$latest_notice_item[usr_auth_item].subject}</span><br>
                             {$latest_notice_item[usr_auth_item].memo}
                           </p>
-                          {/section}
                           <a href="javascript:goBoardView('{$boardname}', '{$latest_notice_item[usr_auth_item].article_id}');" class="btn btn-sm btn-outline-primary">더 보기</a>
+                          {/section}
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
