@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
--- 호스트:                          10.210.150.5
--- 서버 버전:                        10.4.24-MariaDB - mariadb.org binary distribution
--- 서버 OS:                        Win64
+-- 호스트:                          10.210.150.41
+-- 서버 버전:                        10.6.7-MariaDB-2ubuntu1.1 - Ubuntu 22.04
+-- 서버 OS:                        debian-linux-gnu
 -- HeidiSQL 버전:                  11.3.0.6295
 -- --------------------------------------------------------
 
@@ -12,13 +12,13 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- 테이블 hr.smart_factory_warehouse_barcode 구조 내보내기
-CREATE TABLE IF NOT EXISTS `smart_factory_warehouse_barcode` (
-  `id` int(11) NOT NULL,
-  `rand_id` bigint(20) DEFAULT NULL,
+-- 테이블 hr.smart_product_barcode 구조 내보내기
+CREATE TABLE IF NOT EXISTS `smart_product_barcode` (
+  `product_id` int(11) NOT NULL,
+  `rand_id` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `regidate` datetime DEFAULT NULL,
   `ip` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- 내보낼 데이터가 선택되어 있지 않습니다.
