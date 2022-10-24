@@ -2341,7 +2341,7 @@ class PortalController extends Controller {
 
                 // 사용자명
                 if (isset($_POST['usrname']) && 
-                    strlen($_POST['usrname'] > 3)){
+                    strlen($_POST['usrname']) > 3 ){
                     $memberVO->setUsrname($_POST['usrname']);
                 }else{
                     $memberVO->setUsrname(-1);
@@ -2457,7 +2457,7 @@ class PortalController extends Controller {
 
                 // 사용자명
                 if (isset($_POST['usrname']) && 
-                    strlen($_POST['usrname'] > 3)){
+                    strlen($_POST['usrname']) > 3){
                     $updateVo->setUsrname($_POST['usrname']);
                 }else{
                     $updateVo->setUsrname(-1);
