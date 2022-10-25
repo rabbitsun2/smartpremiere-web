@@ -295,7 +295,7 @@ class IotController extends Controller {
 
         // UUID 존재 여부
         if ($status === 1){
-            $resultUuid = $this->machine_service->selectMachineFindUuid( $machineVO->getUuid() );
+            $resultUuid = $this->machine_service->selectMachineFindUuid( $machineVO );
 
             if ( isset($resultUuid) ){
                 $status = 1;
